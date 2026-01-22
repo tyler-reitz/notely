@@ -9,7 +9,7 @@ jobs:
     name: Deploy
     runs-on: ubuntu-latest
 
-  stesp:
+  steps:
     - name: Check out code
       uses: actions/checkout@v4
 
