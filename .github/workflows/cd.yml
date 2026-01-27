@@ -24,7 +24,7 @@ jobs:
       - name: Build app
         run: npm run build
 
-      - id: gcloud auth
+      - id: auth
         uses: google-github-actions/auth@v2
         with:
           credentials_json: ${{ secrets.GCP_CREDENTIALS }}
