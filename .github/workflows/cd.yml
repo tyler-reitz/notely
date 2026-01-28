@@ -35,3 +35,6 @@ jobs:
       - name: build & push docker image to GCR 
         run: gcloud builds submit --tag us-west1-docker.pkg.dev/notely-485121/notely-ar-repo/notely:latest
 
+      - name: Deploy to Cloud run
+        run: gcloud run deploy notely --image us-west1-docker.pkg.dev/notely-485121/notely-ar-repo/notely:latest --region us-central1 --allow unauthenticated --project notely-485121 --max-instances 4
+
